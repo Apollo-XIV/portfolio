@@ -1,14 +1,17 @@
 [application]
 
 # App (Project) Name
-name = "Tailwind CSS + Dioxus"
+name = "demo"
+
+out_dir="docs"
 
 # Dioxus App Default Platform
 # desktop, web, mobile, ssr
 default_platform = "web"
 
 # `build` & `serve` dist path
-out_dir = "dist"
+
+base_path = "portfolio"
 
 # resource (public) file folder
 asset_dir = "public"
