@@ -13,3 +13,9 @@ jobs:
             - uses: actions/checkout@v3
             - run:  cd demo && cargo install dioxus-cli --locked
             - run:  cd demo && dx build --release
+            - uses: actions/upload-pages-artifact@v2
+              with:
+                path: ./demo/docs
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v2
