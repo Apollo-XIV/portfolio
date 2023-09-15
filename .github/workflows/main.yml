@@ -1,1 +1,15 @@
-on_b
+name: main
+
+on:
+    push:
+        branches: ["main"]
+
+jobs:
+    build-dx:
+        name: build
+        runs-on: rust:latest
+        
+        steps:
+            - uses: actions/checkout@v3
+            - run:  cd demo && cargo install dioxus-cli --locked
+            - run:  cd demo && dx build --release
